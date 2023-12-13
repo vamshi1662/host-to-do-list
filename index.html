@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="TO_DO-LIST.CSS" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Nunito:wght@200&family=Raleway:ital,wght@0,100;1,100&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Foldit:wght@100&family=Lilita+One&family=Noto+Sans+Kawi&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="mainContainer">
+      <h2 id="todoText">TO-DO <span id="listText">LIST</span></h2>
+
+      <div class="inputText">
+        <input type="text" placeholder="Enter Your Task" id="enterText" />
+        <button id="adTaskBtn" onclick="addTask()">ADD</button>
+      </div>
+      <div>
+        <ul id="ulText">
+          <!-- <li>Text1</li>
+          <li>Text2</li>
+          <li>Text3</li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="TO_DO_LIST.js"></script>
+  </body>
+</html>

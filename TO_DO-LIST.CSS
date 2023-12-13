@@ -1,0 +1,240 @@
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #fcf6f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+#mainContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#todoText {
+  /* font-family: "Fasthand", "cursive"; */
+  font-family: "Advent Pro", sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#listText {
+  /* color: #8aaae5; */
+  background: -webkit-linear-gradient(#56c956, #48acd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inputText {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#enterText {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#adTaskBtn {
+  padding: 10px;
+  background: -webkit-linear-gradient(180deg, #aae4aa, #cfe5ec);
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  color: #555;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#adTaskBtn:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+#ulText {
+  list-style: none;
+  padding: 0;
+}
+
+#ulText li {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  padding: 10px 10px 10px 30px;
+  font-size: 18px;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  width: 85%;
+  text-transform: capitalize;
+
+  /* border: 2px solid red; */
+}
+
+#ulText li::before {
+  content: "";
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: -40px; /* Adjusted left position for better alignment */
+  transform: translateY(-50%);
+  display: inline-block;
+  margin-right: 10px; /* Adjusted margin for proper spacing */
+  transition: 0.2s;
+}
+
+#ulText li:not(.checked)::before {
+  background-image: url("record.png");
+  height: 25px;
+  width: 25px;
+  left: 2px;
+}
+
+#ulText li.checked::before {
+  background-image: url("green\ checked.png");
+  height: 25px; /* Adjusted height for the check image */
+  width: 25px;
+  left: 2px; /* Adjusted width for the check image */
+}
+
+#ulText li.checked {
+  text-decoration: line-through;
+}
+#ulText li:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+#ulText li span {
+  position: absolute;
+  right: -35px;
+  top: 15%;
+  /* transform: translateY(-50%); */
+  font-size: 22px;
+  color: #555;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: bold;
+  box-sizing: border-box;
+  /* max-width: 30px; */
+  /* max-height: 30px; */
+  -webkit-transition: 0.5s;
+}
+#ulText li span:hover {
+  /* transition: 0.8s all; */
+  transform: rotate(90deg);
+  color: red;
+  cursor: pointer;
+  /* border-radius: 15px; */
+  -webkit-transition: 0.5s;
+}
+/* ----------------------------------------
+media query start fro here
+-------------------------------------------  */
+
+@media only screen and (max-width: 600px) {
+  #mainContainer {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 431px) {
+  #mainContainer {
+    margin: 0 10px;
+    padding: 15px;
+  }
+  #ulText li span {
+    left: 359px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  #mainContainer {
+    margin: 0 10px;
+    padding-left: 10px;
+  }
+  #ulText li span {
+    left: 335px;
+  }
+}
+@media only screen and (max-width: 394px) {
+  #mainContainer {
+    margin-right: 10px 10px;
+   
+  }
+  #ulText li span {
+    left: 325px;
+    font-size: 18px;
+  }
+  
+
+  
+}
+@media only screen and (max-width: 391px) {
+  #mainContainer {
+    margin: 0 10px;
+    padding: 15px;
+  }
+  #ulText li span {
+    left: 315px;
+  }
+  #adTaskBtn {
+    padding: 0 5px;
+    font-size: 10px;
+  }
+  #ulText li {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  #mainContainer {
+    margin: 0 10px;
+    padding: 15px;
+  }
+  #ulText li span {
+    left: 308px;
+  }
+}
+@media only screen and (max-width: 361px) {
+  #mainContainer {
+    margin: 0 10px;
+    padding: 15px;
+  }
+  #ulText li span {
+    left: 290px;
+  }
+}
+
+@media only screen and (max-width: 281px) {
+  #mainContainer {
+    margin: 10px 0 0 15px;
+
+    padding: 10px;
+  }
+  #ulText li span {
+    left: 195px;
+    font-size: 14px;
+  }
+  #adTaskBtn {
+    padding: 0 5px;
+    font-size: 10px;
+  }
+  #ulText li {
+    font-size: 11px;
+  }
+  .inputText {
+    width: 50px;
+    height: 30px;
+  }
+}
